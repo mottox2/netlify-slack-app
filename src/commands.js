@@ -1,9 +1,12 @@
 exports.handler = function(event, context, callback) {
   const response = {
-    "text": "It's 80 degrees right now.",
+    "text": "おすすめの泣けるアニメ",
     "attachments": [
       {
-        "text":"Partly cloudy today and tomorrow"
+        "text":"CLANNAD AFTER STORY"
+      },
+      {
+        "text":"ヴァイオレット・エヴァーガーデン"
       }
     ]
   }
