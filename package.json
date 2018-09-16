@@ -12,6 +12,7 @@
     "build": "netlify-lambda build src/"
   },
   "dependencies": {
+    "@octokit/rest": "^15.11.3",
     "@slack/client": "^4.6.0"
   }
 }
