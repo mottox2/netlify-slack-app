@@ -10,5 +10,8 @@
   },
   "scripts": {
     "build": "netlify-lambda build src/"
+  },
+  "dependencies": {
+    "@slack/client": "^4.6.0"
   }
 }
