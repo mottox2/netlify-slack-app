@@ -23,8 +23,8 @@ exports.handler = async (event, context, callback) => {
       inclusive: true
     })
     const message = res.messages[0]
-    const octkit = new Octokit()
-    octkit.authenticate({
+    const octokit = Octokit()
+    octokit.authenticate({
       type: 'oauth',
       token: process.env.GITHUB_TOKEN
     })
