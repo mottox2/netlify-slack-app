@@ -4,7 +4,7 @@ import { WebClient } from '@slack/client'
 // slack_tokenの取得
 // メッセージの取得方法
 
-exports.handler = (event, context, callback) => {
+exports.handler = async (event, context, callback) => {
   const body = JSON.parse(event.body)
   const event = body.event
   console.log(JSON.stringify(body, null, 4))
