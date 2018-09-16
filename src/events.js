@@ -29,7 +29,7 @@ exports.handler = async (event, context, callback) => {
       token: process.env.GITHUB_TOKEN
     })
 
-    const content = (new Buffer('変換前の文字列')).toString('base64')
+    const content = (new Buffer(slackEvent.item.text)).toString('base64')
 
     octokit.repos.createFile({
       owner: 'mottox2',
