@@ -6,15 +6,15 @@ import { WebClient } from '@slack/client'
 
 exports.handler = async (event, context, callback) => {
   const body = JSON.parse(event.body)
+  const slackEvent = body.event
   console.log(JSON.stringify(body, null, 4))
-  const event = body.event
 
-  if (event && event.type === 'reaction_added' && event.item.type === 'message') {
+  if (slackEvent && slackEvent.type === 'reaction_added' && slackEvent.item.type === 'message') {
     const web = new WebClient(process.env.SLACK_TOKEN)
     const result = await web.conversations.history({
-      latest: event.item.ts,
+      latest: slackEvent.item.ts,
       limit: 1,
-      channel: event.item.channel
+      channel: slackEvent.item.channel
     })
     console.log(result)
   }
