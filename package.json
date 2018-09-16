@@ -9,7 +9,7 @@
     "netlify-lambda": "^0.4.0"
   },
   "scripts": {
-    "build": "netlify-lambda build src/"
+    "build": "netlify-lambda build src/ & node build.js"
   },
   "dependencies": {
     "@octokit/rest": "^15.11.3",
