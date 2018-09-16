@@ -14,7 +14,8 @@ exports.handler = async (event, context, callback) => {
     const result = await web.conversations.history({
       latest: slackEvent.item.ts,
       limit: 1,
-      channel: slackEvent.item.channel
+      channel: slackEvent.item.channel,
+      inclusive: true
     })
     console.log(result)
   }
