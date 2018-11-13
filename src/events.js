@@ -1,14 +1,6 @@
 import { WebClient } from '@slack/client'
 import Octokit from '@octokit/rest'
 
-// ## 書く
-// slack_tokenの取得
-// メッセージの取得方法
-// web.conversations APIを叩くのに必要な権限
-// => https://api.slack.com/methods/conversations.history
-
-// https://github.com/settings/tokens
-
 exports.handler = async (event, context, callback) => {
   const body = JSON.parse(event.body)
   const slackEvent = body.event
