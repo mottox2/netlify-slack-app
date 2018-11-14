@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@octokit/rest": "^15.11.3",
-    "@slack/client": "^4.6.0"
+    "@slack/client": "^4.6.0",
+    "mini-scrape": "^1.1.0"
   }
 }
