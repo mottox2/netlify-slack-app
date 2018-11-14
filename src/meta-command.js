@@ -7,8 +7,17 @@ exports.handler = async (event, context, callback) => {
   const body = querystring.parse(event.body)
   console.log(body)
 
-  const response = {
-    "text": "OK",
+  let response = {}
+  if (body.text) {
+    const window = await scrape(body.text)
+    console.log(window)
+    response = {
+      "text": window.document.title,
+    }
+  } else {
+    response = {
+      "text": "Missing URL",
+    }
   }
 
   callback(null, {
